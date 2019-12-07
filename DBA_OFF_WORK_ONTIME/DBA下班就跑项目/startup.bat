@@ -1,0 +1,1 @@
+python D:\PycharmProjects\nxOPSTOOLS²âÊÔÏîÄ¿\__main__.py > log.log

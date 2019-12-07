@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta charset="UTF-8">
+    <title>xxxx事业部</title>
+    <script type="text/javascript">
+function show_confirm(dmlarea,whoexec,sysid)
+{
+var areaname=sysid
+ 
+ 
+ if(dmlarea.value.length == 0 )
+   {
+    alert("脚本没填");
+    }
+   else
+  {
+  alert("确定在"+areaname.value+"?");
+  }
+
+
+}
+</script>
+</head>
+<body>
+<div align="center">
+<h2>脚本执行器</h2>
+
+    <form  method="POST" accept-charset="UTF-8">
+         
+        <input type="text" name="whoexec"  placeholder="执行人">
+        <br>
+
+        <br>
+        <textarea name="dmlarea" style="width:1000px; height:400px" rows="10" cols="30" placeholder="此处填写执行脚本"></textarea>
+
+        <br>
+         <span>目标系统：</span>
+      <select name="sysid" id="car">
+            {% for i in u %}
+             
+            
+                
+           
+        <option value="{{ i }}" selected>{{ i }}</option>
+        {% endfor %}
+      </select>
+        <br>
+        <input type="submit" onclick="show_confirm(dmlarea,whoexec,sysid)" value="确定">
+        <input type="reset" value="重置">
+    </form>
+<br>
+    <br>
+    <br>
+    使用说明：
+    <br>
+    在“执行人”处填写你的名字。
+    <br>
+    在“收取执行结果邮箱”处填写你的邮箱用来接收执行情况，以确保没有遗漏的数据库。
+     <br>
+    在“执行脚本”处填写需要执行的脚本(第三个大方框)。
+     <br>
+    在“目标系统”处选择你要在哪个系统上执行。 务必选对。
+
+     <br>
+    点击确定后，系统会把你提交的东西邮件发送给我，
+     <br>
+    我审过之后，会给你提供一个四位验证码，在下个页面填写，然后提交即可。
+     <br>
+    如果系统选错，返回当前页面就行。
+    <br>
+    注意！！！ 两个；； 之间不能有空语句
+    <br>
+ 
+</div>
+
+</body>
+</html>
